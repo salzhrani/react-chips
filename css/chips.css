@@ -1,0 +1,44 @@
+.react-chips {
+	display: flex;
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font: 13.33333px Arial;
+    min-height: 24;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5px;
+    border-radius: 5;
+}
+.react-chips:focus {
+	border: 1px solid #aaa;
+}
+.react-chips .react-autosuggest__container {
+	flex: 1;
+}
+.react-chips .react-autosuggest__input {
+	border: none;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5;
+    margin: 2.5;
+ }
+ .react-chips .react-autosuggest__suggestions-list {
+	position: absolute;
+    border: 1px solid #ccc;
+    z-index: 10;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ .react-chips .react-autosuggest__suggestion {
+	padding: 5px 15px;
+ }
+ .react-chips .react-autosuggest__suggestion--highlighted {
+	background: #ddd;
+ }
