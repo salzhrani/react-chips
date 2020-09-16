@@ -51,6 +51,7 @@
     "babel-loader": "^8.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "prettier": "^2.1.1",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
@@ -64,5 +65,10 @@
   "dependencies": {
     "react-autosuggest": "^10.0.2",
     "react-use": "^15.3.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass|css?raw)$": "identity-obj-proxy"
+    }
   }
 }

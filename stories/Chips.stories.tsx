@@ -23,8 +23,8 @@ const suggestions = [
   'Go',
 ];
 
-export const Basic = (props: Props) => {
-  const [value, setValue] = useState([]);
+export const Basic = () => {
+  const [value, setValue] = useState<string[]>([]);
   return (
     <Chips
       value={value}
@@ -37,49 +37,8 @@ export const Basic = (props: Props) => {
   );
 };
 
-const data = [
-  { name: 'JavaScript', image: 'http://i.stack.imgur.com/Mmww2.png' },
-  {
-    name: 'Ruby',
-    image:
-      'https://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.ruby.png',
-  },
-  {
-    name: 'Python',
-    image:
-      'http://www.iconarchive.com/download/i73027/cornmanthe3rd/plex/Other-python.ico',
-  },
-  {
-    name: 'Java',
-    image: 'https://cdn2.iconfinder.com/data/icons/metro-ui-dock/128/Java.png',
-  },
-  {
-    name: 'Swift',
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNaPStsM3XwWDAgvjFfT5RFcDxuynJUJmY4lH5PSMyhphA9hA',
-  },
-  {
-    name: 'C++',
-    image: 'http://www.freeiconspng.com/uploads/c--logo-icon-0.png',
-  },
-  {
-    name: 'C',
-    image: 'http://www.compindiatechnologies.com/images/icon/c.gif',
-  },
-  {
-    name: 'Objective C',
-    image:
-      'http://2.bp.blogspot.com/-BuR1DpqQprU/U5CQ_0w2L7I/AAAAAAAABZY/H9wbfbO-kew/s1600/iOS_Objective_C.png',
-  },
-  {
-    name: 'Go',
-    image:
-      'https://www.codemate.com/wp-content/uploads/2015/11/go-lang-icon-180x180.png',
-  },
-];
-
-const fetchSuggestions = (value) => {
-  return new Promise<string[]>((resolve, reject) => {
+const fetchSuggestions = (value: string) => {
+  return new Promise<string[]>((resolve) => {
     if (value.length >= 1) {
       setTimeout(() => {
         let filtered = suggestions.filter(
@@ -93,8 +52,8 @@ const fetchSuggestions = (value) => {
   });
 };
 
-export const Async = (props: Props) => {
-  const [value, setValue] = useState([]);
+export const Async = () => {
+  const [value, setValue] = useState<string[]>([]);
   return (
     <Chips
       value={value}
